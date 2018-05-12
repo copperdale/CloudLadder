@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+     "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+
+
+	<bean id="userDAO" class="com.laixusoft.cloudelevator.biz.dal.dao.ibatis.UserDAOIbatis" />
+	<bean id="deviceDAO" class="com.laixusoft.cloudelevator.biz.dal.dao.ibatis.DeviceDAOIbatis" />
+	<bean id="mediaDAO" class="com.laixusoft.cloudelevator.biz.dal.dao.ibatis.MediaDAOIbatis" />
+	<bean id="deviceMediaDAO" class="com.laixusoft.cloudelevator.biz.dal.dao.ibatis.DeviceMediaDAOIbatis" />
+	<bean id="noticeDAO" class="com.laixusoft.cloudelevator.biz.dal.dao.ibatis.NoticeDAOIbatis" />
+</beans>

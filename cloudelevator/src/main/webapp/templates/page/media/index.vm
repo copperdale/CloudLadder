@@ -1,0 +1,70 @@
+<section class="content">
+    <section class="scrollable wrapper">
+        <section class="panel">
+            <header class="panel-heading">
+                资源列表
+            </header>
+            <div class="row wrapper">
+                <div class="col-sm-5 m-b-xs">
+                    <button class="btn btn-sm btn-success" onclick="app.media.editView(0)"><i class="fa fa-plus"></i>资源
+                    </button>
+                </div>
+                <div class="col-sm-4 m-b-xs">
+                </div>
+                <div class="col-sm-3">
+                    <form class="form-inline" action="$baseModule.setTarget('media/index')">
+                        <div class="input-group">
+                            <input type="text" placeholder="输入资源名称" name="key" class="input-sm form-control" placeholder="Search" value="$!query.key">
+                          <span class="input-group-btn">
+                            <button class="btn btn-sm btn-white" type="submit">查询</button>
+                          </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped b-t">
+                    <thead>
+                    <tr>
+                        <th>资源名称</th>
+                        <th>资源大小</th>
+                        <th>资源路径</th>
+                        <th width="60"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        #foreach($media in $medias)
+                        <tr>
+                            <td>$!media.title</td>
+                            <td>$!media.fileSize</td>
+                            <td>$!media.url</td>
+                            <td>
+                                <a href="javascript:vid(0);" onclick="app.media.deleteView($!media.id)">
+                                    <i class="fa fa-trash-o text-danger text"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        #end
+                    </tbody>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        #if($!query.pageSize*$!query.pageNo>$!query.totalResultCount)
+                            #set($cur=($!query.startRow+1)+"-"+$!query.totalResultCount)
+                        #else
+                            #set($cur=($!query.startRow+1)+"-"+$!query.pageSize*$!query.pageNo)
+                        #end
+                        <small class="text-muted inline m-t-sm m-b-sm">当前显示: $!cur
+                            &nbsp;&nbsp;&nbsp;&nbsp;总记录: $!query.totalResultCount</small>
+                    </div>
+                    <div class="col-sm-8 text-right text-center-xs">
+                        $widget.setTemplate('common/pagination').addToContext('pageModule', $baseModule.setTarget('media/index')).addToContext('query', $query)
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+</section>
+<script type="text/javascript" src="$jsServer/app/media.js"></script>

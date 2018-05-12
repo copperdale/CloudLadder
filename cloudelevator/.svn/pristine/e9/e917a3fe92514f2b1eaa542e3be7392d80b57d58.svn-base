@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gbk"?>
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+     "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+
+	<bean id="dataSource" class="wint.help.sql.datasource.SimpleDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${cloudelevator.jdbc.url}" />
+		<property name="username" value="${cloudelevator.jdbc.username}" />
+		<property name="password" value="${cloudelevator.jdbc.password}" />
+	</bean>
+	
+</beans>

@@ -1,0 +1,1 @@
+{"results" : $!query.totalResultCount,"data" : #if($!notices) $!securityUtil.raw($!jsonUtil.mfields('id,content',$!notices)) #end}

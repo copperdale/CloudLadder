@@ -1,0 +1,54 @@
+<section class="content">
+    <section class="scrollable wrapper">
+        <section class="panel">
+            <header class="panel-heading">
+                通知列表
+            </header>
+            <div class="row wrapper">
+                <div class="col-sm-12 m-b-xs">
+                    <button class="btn btn-sm btn-success" onclick="app.notice.editView(0)"><i class="fa fa-plus"></i>通知
+                    </button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped b-t">
+                    <thead>
+                    <tr>
+                        <th>通知内容</th>
+                        <th width="60"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        #foreach($notice in $notices)
+                        <tr>
+                            <td>$!notice.content</td>
+                            <td>
+                                <a href="javascript:vid(0);" onclick="app.notice.deleteView($!notice.id)">
+                                    <i class="fa fa-trash-o text-danger text"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        #end
+                    </tbody>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        #if($!query.pageSize*$!query.pageNo>$!query.totalResultCount)
+                            #set($cur=($!query.startRow+1)+"-"+$!query.totalResultCount)
+                        #else
+                            #set($cur=($!query.startRow+1)+"-"+$!query.pageSize*$!query.pageNo)
+                        #end
+                        <small class="text-muted inline m-t-sm m-b-sm">当前显示: $!cur
+                            &nbsp;&nbsp;&nbsp;&nbsp;总记录: $!query.totalResultCount</small>
+                    </div>
+                    <div class="col-sm-8 text-right text-center-xs">
+                        $widget.setTemplate('common/pagination').addToContext('pageModule', $baseModule.setTarget('notice/index')).addToContext('query', $query)
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+</section>
+<script type="text/javascript" src="$jsServer/app/notice.js"></script>

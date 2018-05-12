@@ -1,0 +1,7 @@
+#macro(errorMessage $str)
+	#if( "$!str" != "")
+		<div class="alert alert-danger">
+            ${str}
+        </div>
+	#end
+#end

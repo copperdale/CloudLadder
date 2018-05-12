@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="$buiServer/css/bs3/dpl-min.css">
+<link rel="stylesheet" href="$buiServer/css/bs3/bui-min.css">
+<link rel="stylesheet" href="$buiServer/css/main-min.css">
+<style>
+    .bui-grid-table .bui-grid-hd-inner{
+        height: 34px;
+    }
+</style>
+<section class="content">
+    <section class="scrollable wrapper">
+        <section class="panel">
+            <header class="panel-heading">
+                名称: $!device.deviceName   编号:$!device.deviceNumber
+            </header>
+            <div class="row text-sm wrapper">
+                <div class="col-sm-12 m-b-xs">
+##                    <a class="btn btn-sm btn-default m-r-sm page-action" data-type="setTitle" title="设备管理"  href="$!baseModule.setTarget("device/index")"><i class="fa fa-backward"></i>返回</a>
+                    <button class="btn btn-sm btn-success" id="J_BtnSelect"><i class="fa fa-plus"></i>视频
+                    </button>
+                </div>
+            </div>
+            <section class="panel no-border">
+                <header class="panel-heading">
+                    播放列表
+                </header>
+                <div class="table-responsive">
+                    <table class="table table-striped b-t">
+                        <thead>
+                        <tr>
+                            <th>视频名称</th>
+                            <th>视频大小</th>
+                            <th>视频路径</th>
+                            <th width="60"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #foreach($media in $medias)
+                            <tr>
+                                <td>$!media.title</td>
+                                <td>$!media.fileSize</td>
+                                <td>$!media.url</td>
+                                <td>
+                                    <a href="javascript:vid(0);" onclick="app.device.deleteMediaView($!media.id)">
+                                        <i class="fa fa-trash-o text-danger text"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+    </section>
+    <div id="J_Content" class="hide">
+        <form class="form-horizontal" id="baseInfoForm" action="$baseModule.setTarget('device/doSaveMedias')"
+              method="post" role="form">
+            $securityUtil.tokenHtml
+            <input type="hidden" name="medias" id="mediaIds" value="">
+            <input type="hidden" name="id" value="$!device.id">
+            <div id="J_ContentGrid"></div>
+        </form>
+    </div>
+</section>
+<script type="text/javascript" src="$jsServer/app/device.js"></script>
+
+<script type="text/javascript">
+    BUI.use(['bui/grid','bui/data','bui/overlay'],function(Grid,Data,Overlay){
+        var Store = Data.Store,
+                columns = [
+                    {dataIndex : 'id',title : 'id', visible: false},
+                    {dataIndex : 'title',title : '视频名称'},
+                    {dataIndex : 'fileSize',title : '视频大小'}
+                ];
+
+        var selStore = new Store({
+                    url : '$!baseModule.setTarget('media/json')',
+                    autoLoad:true,
+                    pageSize:20 // 配置分页数目
+                }),
+                grid = new Grid.Grid({
+                    render:'#J_ContentGrid',
+                    width:650,
+                    height:260,
+                    loadMask: true,
+                    store : selStore,
+                    columns : columns,
+                    plugins : [Grid.Plugins.CheckSelection],
+                    bbar:{
+                        pagingBar:true
+                    }
+                });
+
+        grid.render();
+
+        function addMedia(dialig){
+            var medias = grid.getSelection();
+            var mediaIds = jQuery.map(medias, function(media,index) {
+                var str = media.id;
+                return str;
+            }).join(",");
+            $('input[id=mediaIds]').val(mediaIds);
+            app.common.ajaxTokenSubmit(function (response) {
+                if(app.common.baseFromResponse(response)){
+                    dialig.close();
+                    window.location.reload();
+                }
+            });
+        }
+
+        //创建弹出框，延迟创建
+        function createDialog(){
+            return new Overlay.Dialog({
+                title:'选择联系人',
+                height:420,
+                contentId:'J_Content',
+                success:function () {
+                    addMedia(this);
+                }
+            });
+        }
+        var dialog;
+
+        $('#J_BtnSelect').on('click',function () {
+            if(!dialog){
+                dialog = createDialog();
+            }
+            dialog.show();
+            selStore.load({start : 0});
+        });
+    });
+</script>

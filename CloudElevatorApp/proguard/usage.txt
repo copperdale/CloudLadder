@@ -1,0 +1,720 @@
+android.izy.service.old.ServiceBinderObservable
+android.izy.service.old.ServiceBinderUtils
+android.izy.service.old.ServiceBinderUtils$1
+android.studio.AppUncaughtException:
+    private static final java.lang.String VERSION_NAME
+    private static final java.lang.String VERSION_CODE
+    private static final java.lang.String CRASH_EXTNAME
+    67:68:public void setExternalCacheDir(java.lang.String)
+    71:72:public void setExternalCacheDir(java.io.File)
+android.studio.app.ActivitySupport:
+    protected android.app.Dialog progressDialog
+    52:55:public void exitApplication()
+    87:88:public void showLoadingProgressDialog()
+    92:98:public void showProgressDialog(java.lang.CharSequence)
+    102:127:public void showProgressDialog(java.lang.CharSequence,android.content.DialogInterface$OnCancelListener)
+    130:130:public android.app.Dialog newLoadingDialog()
+    134:135:public void cancelProgressDialog()
+    139:142:public void dismissProgressDialog()
+android.studio.app.ActivitySupport$2
+android.studio.app.ActivitySupport$3
+android.studio.app.HTMLViewerActivity:
+    public static final java.lang.String BASE_URI
+    static final int MAXFILESIZE
+    static final java.lang.String LOGTAG
+android.studio.app.IController
+android.studio.app.NetActivitySupport:
+    private android.net.wifi.WifiInfo info
+    39:44:public void onConnected(int)
+    48:53:public void onDisconnected(int)
+    59:59:public void onWifiConnected(android.net.wifi.WifiInfo)
+    65:65:public void onWifiDisconnected(android.net.wifi.WifiInfo)
+android.studio.app.WebViewActivity:
+    48:48:protected android.webkit.WebView getWebView()
+android.studio.app.dialog.BlurDialog:
+    public static final java.lang.String BUNDLE_KEY_DOWN_SCALE_FACTOR
+    public static final java.lang.String BUNDLE_KEY_BLUR_RADIUS
+    43:45:public BlurDialog(android.content.Context,int)
+    89:92:public void setBlurRadius(int)
+    103:106:public void setDownScaleFactor(float)
+android.studio.app.dialog.BlurDialogEngine:
+    private static final float BLUR_DOWN_SCALE_FACTOR
+    private static final int BLUR_RADIUS
+    130:135:public void setDownScaleFactor(float)
+    146:151:public void setBlurRadius(int)
+android.studio.app.dialog.BlurDialogFragment:
+    public static final java.lang.String BUNDLE_KEY_DOWN_SCALE_FACTOR
+    public static final java.lang.String BUNDLE_KEY_BLUR_RADIUS
+    77:80:public void setBlurRadius(int)
+    91:94:public void setDownScaleFactor(float)
+android.studio.app.dialog.DialogUtils
+android.studio.app.dialog.DialogUtils$1
+android.studio.app.dialog.FastBlurHelper:
+    19:21:private FastBlurHelper()
+android.studio.database.sqlite.CursorWapper
+android.studio.database.sqlite.ICursor
+android.studio.database.sqlite.ISQLiteWapper
+android.studio.database.sqlite.ISQLiteWapper$RowQuery
+android.studio.database.sqlite.PageInfo
+android.studio.database.sqlite.SQLiteOpenHelper
+android.studio.database.sqlite.SQLiteWapper
+android.studio.io.CountingFileEntity
+android.studio.io.CountingInputStreamEntity
+android.studio.io.CountingOutputStream
+android.studio.io.CountingOutputStream$CountingListener
+android.studio.io.FileSystemUtils:
+    public static final int BUFFER_SIZE
+    static final java.lang.String EMPTY
+    static final int UNIT_INTERVAL
+    static final int DECIMAL_NUMBER
+    static final int KB
+    static final int MB
+    static final int GB
+    21:21:public FileSystemUtils()
+    39:39:public static java.lang.String getExtensionName(java.io.File)
+    44:56:public static java.lang.String getFileTitle(java.lang.String)
+    66:67:public static java.lang.String getFileSuffixName(java.lang.String)
+    72:75:public static java.lang.String getMimeType(java.lang.String)
+    87:103:public static long toFileSize(java.lang.String)
+    114:136:public static java.lang.String toFileSize(long)
+    146:155:public static java.lang.String createCopyFile(java.lang.String)
+    165:168:public static void updateLastModified(java.lang.String,java.lang.String)
+    177:177:public static boolean isExists(java.lang.String)
+    190:201:public static boolean deleteRecursively(java.io.File)
+    219:241:public static void copyRecursively(java.io.File,java.io.File)
+    261:261:public static int copy(java.io.File,java.io.File)
+    277:280:public static void copy(byte[],java.io.File)
+    293:293:public static byte[] copyToByteArray(java.io.File)
+    352:359:public static void copy(byte[],java.io.OutputStream)
+    372:374:public static byte[] copyToByteArray(java.io.InputStream)
+    389:396:public static java.lang.String copyToString(java.io.InputStream)
+    408:409:public static void copyToFile(java.io.InputStream,java.io.File)
+    431:449:public static int copy(java.io.Reader,java.io.Writer)
+    467:474:public static void copy(java.lang.String,java.io.Writer)
+    487:489:public static java.lang.String copyToString(java.io.Reader)
+android.studio.io.IOUtils
+android.studio.media.MediaFile
+android.studio.media.MediaFile$MediaFileType
+android.studio.media.MediaFileType
+android.studio.media.MediaFileType$Type
+android.studio.media.MediaInfo
+android.studio.media.MediaThumbnailUtils
+android.studio.media.MediaThumbnailUtils$SizedThumbnailBitmap
+android.studio.net.ARequest
+android.studio.net.ARequest$Callback
+android.studio.net.HttpClientUtils
+android.studio.net.HttpURLConnectionUtils
+android.studio.net.HttpURLConnectionUtils$RequestMethod
+android.studio.net.http.NanoHTTPD
+android.studio.net.http.NanoHTTPD$1
+android.studio.net.http.NanoHTTPD$1$1
+android.studio.net.http.NanoHTTPD$AsyncRunner
+android.studio.net.http.NanoHTTPD$Cookie
+android.studio.net.http.NanoHTTPD$CookieHandler
+android.studio.net.http.NanoHTTPD$DefaultAsyncRunner
+android.studio.net.http.NanoHTTPD$DefaultTempFile
+android.studio.net.http.NanoHTTPD$DefaultTempFileManager
+android.studio.net.http.NanoHTTPD$DefaultTempFileManagerFactory
+android.studio.net.http.NanoHTTPD$HTTPSession
+android.studio.net.http.NanoHTTPD$IHTTPSession
+android.studio.net.http.NanoHTTPD$Method
+android.studio.net.http.NanoHTTPD$Response
+android.studio.net.http.NanoHTTPD$Response$IStatus
+android.studio.net.http.NanoHTTPD$Response$Status
+android.studio.net.http.NanoHTTPD$ResponseException
+android.studio.net.http.NanoHTTPD$TempFile
+android.studio.net.http.NanoHTTPD$TempFileManager
+android.studio.net.http.NanoHTTPD$TempFileManagerFactory
+android.studio.net.http.ServerRunner
+android.studio.net.http.SimpleHttpServlet
+android.studio.net.http.SimpleServletInputStream
+android.studio.os.AsyncHandler
+android.studio.os.AsyncHandler$1
+android.studio.os.AsyncTaskUtils
+android.studio.os.AsyncTaskUtils$1
+android.studio.os.AsyncTaskUtils$2
+android.studio.os.AsyncTaskUtils$InBackgroundCallback
+android.studio.os.AsyncTaskUtils$SimpleAsyncTask
+android.studio.os.AsyncTaskUtils$SimpleAsyncTask$1
+android.studio.os.AsyncTaskUtils$TaskContainer
+android.studio.os.BitmapLoader
+android.studio.os.BitmapLoader$1
+android.studio.os.BitmapLoader$ImageContainer
+android.studio.os.BitmapLoader$ImageListener
+android.studio.os.BitmapUtils
+android.studio.os.EnvironmentUtils:
+    22:22:public EnvironmentUtils()
+    45:73:public static java.lang.String[] getExternalStorageDirectoryAll()
+    82:87:public static boolean isRootPath(java.lang.String)
+    97:97:public static boolean hasSDCard()
+    110:110:public static java.lang.String getSDTotalSize(android.content.Context)
+    123:123:public static java.lang.String getSDAvailableSize(android.content.Context)
+    132:132:public static long getRomTotalSize()
+    136:136:public static java.lang.String getRomTotalSize(android.content.Context)
+    145:145:public static long getRomAvailableSize()
+    149:149:public static java.lang.String getRomAvailableSize(android.content.Context)
+    212:213:public static java.lang.String getNativePhoneNumber(android.content.Context)
+    223:235:public static java.lang.String getProvidersName(android.content.Context)
+    245:247:public static void hideSoftInputFromWindow(android.content.Context,android.widget.EditText)
+    258:260:public static boolean checkPermission(android.content.Context,java.lang.String)
+android.studio.os.IntentUtils
+android.studio.os.LogCat:
+    13:16:public static void setTag(java.lang.String)
+    19:20:public static varargs void v(java.lang.String,java.lang.Object[])
+    23:24:public static varargs void d(java.lang.String,java.lang.Object[])
+    35:36:public static varargs void e(java.lang.Throwable,java.lang.String,java.lang.Object[])
+    39:40:public static varargs void wtf(java.lang.String,java.lang.Object[])
+    43:44:public static varargs void wtf(java.lang.Throwable,java.lang.String,java.lang.Object[])
+android.studio.os.NetUtils
+android.studio.os.PreferencesUtils:
+    7:7:public PreferencesUtils()
+    26:27:public static int getInt(java.lang.String,int)
+    31:34:public static void setInt(java.lang.String,int)
+    37:38:public static long getLong(java.lang.String,long)
+    42:45:public static void setLong(java.lang.String,long)
+    48:49:public static float getFloat(java.lang.String,float)
+    53:56:public static void setFloat(java.lang.String,float)
+    59:60:public static boolean getBoolean(java.lang.String,boolean)
+    64:67:public static void setBoolean(java.lang.String,boolean)
+    70:73:public static void remove(java.lang.String)
+    76:79:public static void clear()
+android.studio.provider.AudioInfo
+android.studio.provider.FileInfo
+android.studio.provider.ImageInfo
+android.studio.provider.MediaInfo
+android.studio.provider.MediaStoreUtils
+android.studio.provider.VideoInfo
+android.studio.service.NetworkService:
+    private android.studio.service.NetworkManager networkManager
+    25:25:public android.os.IBinder onBind(android.content.Intent)
+    30:33:public void onCreate()
+    37:39:public void onDestroy()
+    43:44:public void onConnected(int)
+    48:49:public void onDisconnected(int)
+android.studio.service.WifiService:
+    private android.net.wifi.WifiInfo info
+    24:30:public final void onConnected(int)
+    34:40:public final void onDisconnected(int)
+    49:55:public static java.lang.String removeDoubleQuotes(java.lang.String)
+    public abstract void onWifiConnected(android.net.wifi.WifiInfo)
+    public abstract void onWifiDisconnected(android.net.wifi.WifiInfo)
+android.studio.service.window.DialogService:
+    public static final java.lang.String SERVICE_INTERFACE
+    private boolean mFinished
+    66:67:public void setContentView(int)
+    86:87:public void setContentView(android.view.View)
+    109:114:public void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)
+    129:131:public void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)
+    144:144:public android.view.View findViewById(int)
+    156:161:public void setFullscreen(boolean)
+    170:170:public boolean isFullscreen()
+    180:185:public void setScreenBright(boolean)
+    212:219:public final void finish()
+    289:293:private void applyWindowFlags(int,int)
+    296:296:private int applyFlags(int,int,int)
+android.studio.service.window.WindowController
+android.studio.service.window.WindowService:
+    39:39:public android.studio.service.window.WindowController getWindowViewManager()
+    43:44:public void addToBackStack(android.studio.service.window.WindowViewBase)
+    47:48:public void addToBackStack(android.studio.service.window.WindowViewBase,boolean)
+    51:52:public void popBackStack()
+android.studio.service.window.WindowViewBase:
+    private android.studio.service.window.WindowController mController
+    24:25:public void setController(android.studio.service.window.WindowController)
+    28:28:public android.studio.service.window.WindowController getController()
+    36:36:public void onResume()
+    43:43:public void onPause()
+android.studio.service.window.WindowViewManager:
+    77:79:public void show()
+    83:92:public void hide()
+    110:110:public boolean isShowing()
+    115:116:public void addToBackStack(android.studio.service.window.WindowViewBase)
+    120:135:public void addToBackStack(android.studio.service.window.WindowViewBase,boolean)
+    139:148:public void popBackStack()
+android.studio.util.ArrayUtils
+android.studio.util.DateUtils
+android.studio.util.DigestUtils
+android.studio.util.NumberUtils
+android.studio.util.StringUtils
+android.studio.util.URLUtils:
+    private static final java.lang.String DEFAULT_CHARSET
+    14:14:public URLUtils()
+    26:28:public static java.lang.String encodeURI(java.lang.String)
+    35:54:public static java.lang.String encodeURL(java.lang.String)
+    80:82:public static java.lang.String decodeURI(java.lang.String)
+    93:98:public static java.lang.String getParentURI(java.lang.String)
+    109:114:public static java.lang.String getNameURI(java.lang.String)
+android.studio.util.ValidatorUtils
+android.studio.view.BannerViewPager:
+    private static final int POST_DELAYED_TIME
+    40:41:public void setScanScroll(boolean)
+    105:105:public android.support.v4.view.PagerAdapter getPagerAdapterWrapper()
+android.studio.view.BannerViewPager$LoopPagerAdapter:
+    233:236:public void notifyDataSetChanged()
+    240:240:public boolean isViewFromObject(android.view.View,java.lang.Object)
+    245:245:public int getItemPosition(java.lang.Object)
+android.studio.view.FlowLayout:
+    101:102:public void setOnItemClickListener(android.studio.view.ICustomLayout$OnItemClickListener)
+android.studio.view.FlowLayout$LayoutParams:
+    94:95:public FlowLayout$LayoutParams(android.view.ViewGroup$MarginLayoutParams)
+android.studio.view.ICustomLayout:
+    public abstract void setOnItemClickListener(android.studio.view.ICustomLayout$OnItemClickListener)
+    public abstract void onItemClick(android.view.View)
+android.studio.view.ICustomView
+android.studio.view.PriceTextChangedListener
+android.studio.view.UISegmentedLayout:
+    58:59:public void setOnItemClickListener(android.studio.view.ICustomLayout$OnItemClickListener)
+android.studio.view.ViewUtils
+android.studio.view.widget.BaseAdapter:
+    26:26:public android.content.Context getContext()
+    30:30:public java.util.List getData()
+    34:39:public void setData(java.util.Collection)
+    42:47:public varargs void setData(java.lang.Object[])
+    50:52:public void add(java.lang.Object)
+    55:59:public void addAll(java.util.Collection)
+    62:66:public varargs void addAll(java.lang.Object[])
+    69:71:public void insert(java.lang.Object,int)
+    74:76:public void remove(java.lang.Object)
+    79:81:public void clear()
+    84:86:public void sort(java.util.Comparator)
+    90:90:public int getCount()
+    95:95:public java.lang.Object getItem(int)
+    99:99:public int getPosition(java.lang.Object)
+    104:104:public long getItemId(int)
+android.studio.view.widget.BaseExpandableListAdapter
+android.studio.view.widget.BasePagerAdapter:
+    24:24:public java.util.List getData()
+    28:32:public void add(android.view.View)
+    35:41:public void addAll(java.util.Collection)
+    44:50:public varargs void addAll(android.view.View[])
+    53:57:public void insert(android.view.View,int)
+    60:64:public void remove(android.view.View)
+    67:71:public void clear()
+    74:78:public void sort(java.util.Comparator)
+    81:82:private void invokeNotifyDataSetChanged()
+    90:90:public android.view.View getItem(int)
+android.studio.view.widget.CToast:
+    public static final int LENGTH_SHORT
+    public static final int LENGTH_LONG
+    37:37:public static android.studio.view.widget.CToast makeText(android.content.Context,int)
+    41:41:public static android.studio.view.widget.CToast makeText(android.content.Context,java.lang.CharSequence)
+    45:45:public static android.studio.view.widget.CToast makeText(android.content.Context,int,int)
+    49:64:public static android.studio.view.widget.CToast makeText(android.content.Context,java.lang.CharSequence,int)
+    87:88:public void setView(android.view.View)
+    96:96:public android.view.View getView()
+    106:107:public void setDuration(int)
+    115:115:public int getDuration()
+    129:131:public void setMargin(float,float)
+    140:143:public void setGravity(int,int,int)
+    149:153:public void show()
+    159:160:public void hide()
+android.studio.view.widget.ChoiceAdapter:
+    public static final int CHOICE_MODE_SINGLE
+    public static final int CHOICE_MODE_MULTIPLE
+    private android.widget.AdapterView$OnItemClickListener itemClickListener
+    private android.widget.AdapterView$OnItemLongClickListener itemLongClickListener
+    31:32:public ChoiceAdapter(android.content.Context,java.util.List)
+    35:36:public void setChoiceMode(int)
+    39:43:public void setCheckedEnabled(boolean)
+    46:46:public boolean isCheckedEnabled()
+    50:50:public int getCheckedItemCount()
+    54:54:public java.util.List getItemCheckedAll()
+    58:58:public java.lang.Object getItemCheckedFirst()
+    62:63:public void toggleItemChecked(int)
+    66:66:public boolean isItemChecked(int)
+    70:75:public boolean isItemChecked(java.lang.Object)
+    79:80:public void setItemChecked(int,boolean)
+    83:90:public void setItemChecked(java.lang.Object,boolean)
+    96:105:public void setItemCheckedAll(boolean)
+    108:109:public void removeItemChecked(int)
+    112:116:public void removeItemChecked(java.lang.Object)
+    119:121:public void removeItemCheckedAll()
+    124:125:public void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)
+    128:129:public void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener)
+    133:138:public android.view.View getView(int,android.view.View,android.view.ViewGroup)
+    142:142:private android.view.View$OnClickListener itemClickListener(int)
+    153:153:private android.view.View$OnLongClickListener itemLongClickListener(int)
+    23:23:static synthetic android.widget.AdapterView$OnItemClickListener access$0(android.studio.view.widget.ChoiceAdapter)
+    24:24:static synthetic android.widget.AdapterView$OnItemLongClickListener access$1(android.studio.view.widget.ChoiceAdapter)
+android.studio.view.widget.ChoiceAdapter$1
+android.studio.view.widget.ChoiceAdapter$2
+android.studio.view.widget.FocusScroller:
+    private int mMode
+    private static final int DEFAULT_DURATION
+    private static final int SCROLL_MODE
+    80:80:public final boolean isFinished()
+    92:93:public final void forceFinished(boolean)
+    101:101:public final android.graphics.Rect getCurrRect()
+    110:110:public final android.graphics.Rect getStartRect()
+    119:119:public final android.graphics.Rect getFinalRect()
+    127:148:public boolean computeScrollOffset()
+    152:153:public void startScroll(android.graphics.Rect,android.graphics.Rect)
+    156:158:public void startScroll(android.graphics.Rect,android.graphics.Rect,int)
+    161:162:public void appendScroll(android.graphics.Rect)
+    172:173:public void abortAnimation()
+android.studio.view.widget.FocusScroller$SplineFocusScroller:
+    private long mStartTime
+    private int mDuration
+    200:207:public void startScroll(android.graphics.Rect,android.graphics.Rect,int)
+    210:212:public void appendScroll(android.graphics.Rect,int)
+    215:219:public void updateScroll(float)
+    222:224:public void finish()
+    227:227:static int calculateCurrentPos(float,int,int)
+    190:190:static synthetic boolean access$0(android.studio.view.widget.FocusScroller$SplineFocusScroller)
+    190:190:static synthetic void access$1(android.studio.view.widget.FocusScroller$SplineFocusScroller,boolean)
+    179:179:static synthetic android.graphics.Rect access$2(android.studio.view.widget.FocusScroller$SplineFocusScroller)
+    177:177:static synthetic android.graphics.Rect access$3(android.studio.view.widget.FocusScroller$SplineFocusScroller)
+    181:181:static synthetic android.graphics.Rect access$4(android.studio.view.widget.FocusScroller$SplineFocusScroller)
+    184:184:static synthetic long access$5(android.studio.view.widget.FocusScroller$SplineFocusScroller)
+    187:187:static synthetic int access$6(android.studio.view.widget.FocusScroller$SplineFocusScroller)
+android.studio.view.widget.PagerAdapter:
+    23:23:public java.util.List getData()
+    27:31:public void add(android.view.View)
+    34:40:public void addAll(java.util.Collection)
+    43:49:public varargs void addAll(android.view.View[])
+    52:56:public void insert(android.view.View,int)
+    59:63:public void remove(android.view.View)
+    66:70:public void clear()
+    73:77:public void sort(java.util.Comparator)
+    80:81:private void invokeNotifyDataSetChanged()
+    89:89:public android.view.View getItem(int)
+android.studio.view.widget.SimpleResourceAdapter:
+    16:17:public SimpleResourceAdapter(android.content.Context,java.util.List)
+    21:25:public android.view.View getView(int,android.view.View,android.view.ViewGroup)
+    public abstract android.view.View newView(android.content.Context,android.view.ViewGroup,int)
+    public abstract void bindView(android.content.Context,android.view.View,int)
+android.studio.view.widget.SimpleVHolderAdapter:
+    25:33:public android.view.View getView(int,android.view.View,android.view.ViewGroup)
+    public abstract android.studio.view.widget.SimpleVHolderAdapter$VHolder newView(android.content.Context,android.view.ViewGroup,int)
+    public abstract void bindView(android.content.Context,android.studio.view.widget.SimpleVHolderAdapter$VHolder,int)
+android.studio.view.widget.SimpleVHolderAdapter$VHolder
+android.studio.widget.MarqueeTextView:
+    108:112:public void setMarqueeFirstInterval(int)
+android.support.annotation.AnimRes
+android.support.annotation.AnimatorRes
+android.support.annotation.AnyRes
+android.support.annotation.ArrayRes
+android.support.annotation.AttrRes
+android.support.annotation.BoolRes
+android.support.annotation.ColorRes
+android.support.annotation.DimenRes
+android.support.annotation.DrawableRes
+android.support.annotation.FractionRes
+android.support.annotation.IdRes
+android.support.annotation.IntDef
+android.support.annotation.IntegerRes
+android.support.annotation.InterpolatorRes
+android.support.annotation.LayoutRes
+android.support.annotation.MenuRes
+android.support.annotation.NonNull
+android.support.annotation.Nullable
+android.support.annotation.PluralsRes
+android.support.annotation.RawRes
+android.support.annotation.StringDef
+android.support.annotation.StringRes
+android.support.annotation.StyleRes
+android.support.annotation.StyleableRes
+android.support.annotation.XmlRes
+com.github.kevinsawicki.http.HttpRequest:
+    public static final java.lang.String CHARSET_UTF8
+    public static final java.lang.String CONTENT_TYPE_FORM
+    public static final java.lang.String CONTENT_TYPE_JSON
+    public static final java.lang.String ENCODING_GZIP
+    public static final java.lang.String HEADER_ACCEPT
+    public static final java.lang.String HEADER_ACCEPT_CHARSET
+    public static final java.lang.String HEADER_ACCEPT_ENCODING
+    public static final java.lang.String HEADER_AUTHORIZATION
+    public static final java.lang.String HEADER_CACHE_CONTROL
+    public static final java.lang.String HEADER_CONTENT_ENCODING
+    public static final java.lang.String HEADER_CONTENT_LENGTH
+    public static final java.lang.String HEADER_CONTENT_TYPE
+    public static final java.lang.String HEADER_DATE
+    public static final java.lang.String HEADER_ETAG
+    public static final java.lang.String HEADER_EXPIRES
+    public static final java.lang.String HEADER_IF_NONE_MATCH
+    public static final java.lang.String HEADER_LAST_MODIFIED
+    public static final java.lang.String HEADER_LOCATION
+    public static final java.lang.String HEADER_PROXY_AUTHORIZATION
+    public static final java.lang.String HEADER_REFERER
+    public static final java.lang.String HEADER_SERVER
+    public static final java.lang.String HEADER_USER_AGENT
+    public static final java.lang.String METHOD_DELETE
+    public static final java.lang.String METHOD_GET
+    public static final java.lang.String METHOD_HEAD
+    public static final java.lang.String METHOD_OPTIONS
+    public static final java.lang.String METHOD_POST
+    public static final java.lang.String METHOD_PUT
+    public static final java.lang.String METHOD_TRACE
+    public static final java.lang.String PARAM_CHARSET
+    private static final java.lang.String BOUNDARY
+    private static final java.lang.String CONTENT_TYPE_MULTIPART
+    private static final java.lang.String CRLF
+    private static javax.net.ssl.SSLSocketFactory TRUSTED_FACTORY
+    private static javax.net.ssl.HostnameVerifier TRUSTED_VERIFIER
+    private boolean form
+    272:299:private static javax.net.ssl.SSLSocketFactory getTrustedFactory()
+    303:311:private static javax.net.ssl.HostnameVerifier getTrustedVerifier()
+    320:322:private static java.lang.StringBuilder addPathSeparator(java.lang.String,java.lang.StringBuilder)
+    328:334:private static java.lang.StringBuilder addParamPrefix(java.lang.String,java.lang.StringBuilder)
+    339:360:private static java.lang.StringBuilder addParam(java.lang.Object,java.lang.Object,java.lang.StringBuilder)
+    404:408:public static void setConnectionFactory(com.github.kevinsawicki.http.HttpRequest$ConnectionFactory)
+    836:857:private static java.util.List arrayToList(java.lang.Object)
+    877:898:public static java.lang.String encode(java.lang.CharSequence)
+    913:933:public static java.lang.String append(java.lang.CharSequence,java.util.Map)
+    948:968:public static varargs java.lang.String append(java.lang.CharSequence,java.lang.Object[])
+    991:991:public static com.github.kevinsawicki.http.HttpRequest get(java.net.URL)
+    1010:1011:public static com.github.kevinsawicki.http.HttpRequest get(java.lang.CharSequence,java.util.Map,boolean)
+    1031:1032:public static varargs com.github.kevinsawicki.http.HttpRequest get(java.lang.CharSequence,boolean,java.lang.Object[])
+    1044:1044:public static com.github.kevinsawicki.http.HttpRequest post(java.lang.CharSequence)
+    1055:1055:public static com.github.kevinsawicki.http.HttpRequest post(java.net.URL)
+    1074:1075:public static com.github.kevinsawicki.http.HttpRequest post(java.lang.CharSequence,java.util.Map,boolean)
+    1095:1096:public static varargs com.github.kevinsawicki.http.HttpRequest post(java.lang.CharSequence,boolean,java.lang.Object[])
+    1108:1108:public static com.github.kevinsawicki.http.HttpRequest put(java.lang.CharSequence)
+    1119:1119:public static com.github.kevinsawicki.http.HttpRequest put(java.net.URL)
+    1138:1139:public static com.github.kevinsawicki.http.HttpRequest put(java.lang.CharSequence,java.util.Map,boolean)
+    1159:1160:public static varargs com.github.kevinsawicki.http.HttpRequest put(java.lang.CharSequence,boolean,java.lang.Object[])
+    1172:1172:public static com.github.kevinsawicki.http.HttpRequest delete(java.lang.CharSequence)
+    1183:1183:public static com.github.kevinsawicki.http.HttpRequest delete(java.net.URL)
+    1202:1203:public static com.github.kevinsawicki.http.HttpRequest delete(java.lang.CharSequence,java.util.Map,boolean)
+    1223:1224:public static varargs com.github.kevinsawicki.http.HttpRequest delete(java.lang.CharSequence,boolean,java.lang.Object[])
+    1236:1236:public static com.github.kevinsawicki.http.HttpRequest head(java.lang.CharSequence)
+    1247:1247:public static com.github.kevinsawicki.http.HttpRequest head(java.net.URL)
+    1266:1267:public static com.github.kevinsawicki.http.HttpRequest head(java.lang.CharSequence,java.util.Map,boolean)
+    1287:1288:public static varargs com.github.kevinsawicki.http.HttpRequest head(java.lang.CharSequence,boolean,java.lang.Object[])
+    1300:1300:public static com.github.kevinsawicki.http.HttpRequest options(java.lang.CharSequence)
+    1311:1311:public static com.github.kevinsawicki.http.HttpRequest options(java.net.URL)
+    1323:1323:public static com.github.kevinsawicki.http.HttpRequest trace(java.lang.CharSequence)
+    1334:1334:public static com.github.kevinsawicki.http.HttpRequest trace(java.net.URL)
+    1345:1346:public static void keepAlive(boolean)
+    1356:1357:public static void maxConnections(int)
+    1368:1370:public static void proxyHost(java.lang.String)
+    1381:1384:public static void proxyPort(int)
+    1396:1405:public static varargs void nonProxyHosts(java.lang.String[])
+    1418:1432:private static java.lang.String setProperty(java.lang.String,java.lang.String)
+    1487:1491:public HttpRequest(java.net.URL,java.lang.String)
+    1537:1538:public com.github.kevinsawicki.http.HttpRequest ignoreCloseExceptions(boolean)
+    1548:1548:public boolean ignoreCloseExceptions()
+    1576:1577:public com.github.kevinsawicki.http.HttpRequest code(java.util.concurrent.atomic.AtomicInteger)
+    1597:1597:public boolean created()
+    1607:1607:public boolean noContent()
+    1617:1617:public boolean serverError()
+    1627:1627:public boolean badRequest()
+    1637:1637:public boolean notFound()
+    1647:1647:public boolean notModified()
+    1658:1661:public java.lang.String message()
+    1671:1672:public com.github.kevinsawicki.http.HttpRequest disconnect()
+    1682:1683:public com.github.kevinsawicki.http.HttpRequest chunk(int)
+    1698:1701:public com.github.kevinsawicki.http.HttpRequest bufferSize(int)
+    1712:1712:public int bufferSize()
+    1734:1735:public com.github.kevinsawicki.http.HttpRequest uncompress(boolean)
+    1791:1792:public com.github.kevinsawicki.http.HttpRequest body(java.util.concurrent.atomic.AtomicReference)
+    1805:1806:public com.github.kevinsawicki.http.HttpRequest body(java.util.concurrent.atomic.AtomicReference,java.lang.String)
+    1817:1817:public boolean isBodyEmpty()
+    1827:1833:public byte[] bytes()
+    1897:1899:public java.io.InputStreamReader reader(java.lang.String)
+    1911:1911:public java.io.InputStreamReader reader()
+    1926:1926:public java.io.BufferedReader bufferedReader(java.lang.String)
+    1938:1938:public java.io.BufferedReader bufferedReader()
+    1951:1955:public com.github.kevinsawicki.http.HttpRequest receive(java.io.File)
+    1974:1976:public com.github.kevinsawicki.http.HttpRequest receive(java.io.OutputStream)
+    1989:1989:public com.github.kevinsawicki.http.HttpRequest receive(java.io.PrintStream)
+    2001:2002:public com.github.kevinsawicki.http.HttpRequest receive(java.lang.Appendable)
+    2026:2027:public com.github.kevinsawicki.http.HttpRequest receive(java.io.Writer)
+    2066:2067:public com.github.kevinsawicki.http.HttpRequest header(java.lang.String,java.lang.String)
+    2078:2078:public com.github.kevinsawicki.http.HttpRequest header(java.lang.String,java.lang.Number)
+    2089:2092:public com.github.kevinsawicki.http.HttpRequest headers(java.util.Map)
+    2102:2102:public com.github.kevinsawicki.http.HttpRequest header(java.util.Map$Entry)
+    2124:2125:public java.util.Map headers()
+    2137:2137:public long dateHeader(java.lang.String)
+    2151:2152:public long dateHeader(java.lang.String,long)
+    2190:2198:public java.lang.String[] headers(java.lang.String)
+    2222:2222:public java.util.Map parameters(java.lang.String)
+    2232:2267:protected java.util.Map getParams(java.lang.String)
+    2329:2329:public com.github.kevinsawicki.http.HttpRequest userAgent(java.lang.String)
+    2339:2339:public com.github.kevinsawicki.http.HttpRequest referer(java.lang.String)
+    2349:2350:public com.github.kevinsawicki.http.HttpRequest useCaches(boolean)
+    2360:2360:public com.github.kevinsawicki.http.HttpRequest acceptEncoding(java.lang.String)
+    2370:2370:public com.github.kevinsawicki.http.HttpRequest acceptGzipEncoding()
+    2380:2380:public com.github.kevinsawicki.http.HttpRequest acceptCharset(java.lang.String)
+    2398:2398:public java.lang.String server()
+    2407:2407:public long date()
+    2416:2416:public java.lang.String cacheControl()
+    2425:2425:public java.lang.String eTag()
+    2434:2434:public long expires()
+    2443:2443:public long lastModified()
+    2452:2452:public java.lang.String location()
+    2462:2462:public com.github.kevinsawicki.http.HttpRequest authorization(java.lang.String)
+    2472:2472:public com.github.kevinsawicki.http.HttpRequest proxyAuthorization(java.lang.String)
+    2484:2484:public com.github.kevinsawicki.http.HttpRequest basic(java.lang.String,java.lang.String)
+    2496:2496:public com.github.kevinsawicki.http.HttpRequest proxyBasic(java.lang.String,java.lang.String)
+    2506:2507:public com.github.kevinsawicki.http.HttpRequest ifModifiedSince(long)
+    2517:2517:public com.github.kevinsawicki.http.HttpRequest ifNoneMatch(java.lang.String)
+    2527:2527:public com.github.kevinsawicki.http.HttpRequest contentType(java.lang.String)
+    2538:2542:public com.github.kevinsawicki.http.HttpRequest contentType(java.lang.String,java.lang.String)
+    2551:2551:public java.lang.String contentType()
+    2570:2570:public com.github.kevinsawicki.http.HttpRequest contentLength(java.lang.String)
+    2580:2581:public com.github.kevinsawicki.http.HttpRequest contentLength(int)
+    2591:2591:public com.github.kevinsawicki.http.HttpRequest accept(java.lang.String)
+    2600:2600:public com.github.kevinsawicki.http.HttpRequest acceptJson()
+    2639:2639:protected com.github.kevinsawicki.http.HttpRequest copy(java.io.Reader,java.io.Writer)
+    2670:2673:private com.github.kevinsawicki.http.HttpRequest incrementTotalSize(long)
+    2723:2730:protected com.github.kevinsawicki.http.HttpRequest openOutput()
+    2740:2746:protected com.github.kevinsawicki.http.HttpRequest startPart()
+    2759:2759:protected com.github.kevinsawicki.http.HttpRequest writePartHeader(java.lang.String,java.lang.String)
+    2773:2781:protected com.github.kevinsawicki.http.HttpRequest writePartHeader(java.lang.String,java.lang.String,java.lang.String)
+    2792:2792:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String)
+    2806:2806:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String,java.lang.String)
+    2823:2829:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    2842:2842:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.Number)
+    2856:2856:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String,java.lang.Number)
+    2869:2869:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.io.File)
+    2883:2883:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String,java.io.File)
+    2901:2906:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String,java.lang.String,java.io.File)
+    2919:2919:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.io.InputStream)
+    2937:2943:public com.github.kevinsawicki.http.HttpRequest part(java.lang.String,java.lang.String,java.lang.String,java.io.InputStream)
+    2956:2956:public com.github.kevinsawicki.http.HttpRequest partHeader(java.lang.String,java.lang.String)
+    2969:2974:public com.github.kevinsawicki.http.HttpRequest send(java.io.File)
+    2985:2987:public com.github.kevinsawicki.http.HttpRequest send(byte[])
+    3001:3006:public com.github.kevinsawicki.http.HttpRequest send(java.io.InputStream)
+    3020:3026:public com.github.kevinsawicki.http.HttpRequest send(java.io.Reader)
+    3047:3052:public com.github.kevinsawicki.http.HttpRequest send(java.lang.CharSequence)
+    3063:3066:public java.io.OutputStreamWriter writer()
+    3081:3081:public com.github.kevinsawicki.http.HttpRequest form(java.util.Map)
+    3095:3095:public com.github.kevinsawicki.http.HttpRequest form(java.util.Map$Entry)
+    3111:3111:public com.github.kevinsawicki.http.HttpRequest form(java.util.Map$Entry,java.lang.String)
+    3127:3127:public com.github.kevinsawicki.http.HttpRequest form(java.lang.Object,java.lang.Object)
+    3144:3161:public com.github.kevinsawicki.http.HttpRequest form(java.lang.Object,java.lang.Object,java.lang.String)
+    3174:3177:public com.github.kevinsawicki.http.HttpRequest form(java.util.Map,java.lang.String)
+    3189:3193:public com.github.kevinsawicki.http.HttpRequest trustAllCerts()
+    3206:3210:public com.github.kevinsawicki.http.HttpRequest trustAllHosts()
+    3240:3245:public com.github.kevinsawicki.http.HttpRequest useProxy(java.lang.String,int)
+    3256:3257:public com.github.kevinsawicki.http.HttpRequest followRedirects(boolean)
+    263:263:static synthetic java.lang.String access$0(java.lang.String)
+com.github.kevinsawicki.http.HttpRequest$1
+com.github.kevinsawicki.http.HttpRequest$10
+com.github.kevinsawicki.http.HttpRequest$2
+com.github.kevinsawicki.http.HttpRequest$3
+com.github.kevinsawicki.http.HttpRequest$4
+com.github.kevinsawicki.http.HttpRequest$5
+com.github.kevinsawicki.http.HttpRequest$6
+com.github.kevinsawicki.http.HttpRequest$7
+com.github.kevinsawicki.http.HttpRequest$9
+com.github.kevinsawicki.http.HttpRequest$Base64
+com.github.kevinsawicki.http.HttpRequest$FlushOperation
+com.github.kevinsawicki.http.HttpRequest$HttpRequestException:
+    private static final long serialVersionUID
+com.github.kevinsawicki.http.HttpRequest$RequestOutputStream:
+    809:812:public HttpRequest$RequestOutputStream(java.io.OutputStream,java.lang.String,int)
+    798:798:static synthetic java.nio.charset.CharsetEncoder access$0(com.github.kevinsawicki.http.HttpRequest$RequestOutputStream)
+com.squareup.picasso.FileRequestHandlerExtend:
+    22:26:java.io.InputStream getInputStream(com.squareup.picasso.Request)
+    1:1:public bridge synthetic boolean canHandleRequest(com.squareup.picasso.Request)
+    1:1:public bridge synthetic com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)
+com.squareup.picasso.NetworkRequestHandlerExtend:
+    public static final int IMAGE_MAX_CACHE_DATA
+    29:55:public com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)
+    1:1:public bridge synthetic boolean canHandleRequest(com.squareup.picasso.Request)
+com.squareup.picasso.PicassoFactory:
+    13:13:public PicassoFactory()
+com.squareup.picasso.PicassoFactory$1:
+    37:38:public void onImageLoadFailed(com.squareup.picasso.Picasso,android.net.Uri,java.lang.Exception)
+com.studio.cloudelevator.BuildConfig
+com.studio.cloudelevator.R
+com.studio.cloudelevator.R$attr
+com.studio.cloudelevator.R$dimen
+com.studio.cloudelevator.R$drawable
+com.studio.cloudelevator.R$id
+com.studio.cloudelevator.R$layout
+com.studio.cloudelevator.R$raw
+com.studio.cloudelevator.R$string
+com.studio.cloudelevator.R$style
+com.studio.cloudelevator.app.MediaList:
+    35:37:public void setData(java.util.List)
+com.studio.cloudelevator.config.AppConfig:
+    public static final java.lang.String BaseUrl
+    public static final java.lang.String InitConfig
+    public static final java.lang.String SCREENSHOT_POST
+    private static final java.lang.String pref_uuid
+    private static final java.lang.String pref_config_json
+    private static final java.lang.String pref_breakpoint
+    public static final java.lang.String ACTION_DEVICE_NAME
+    public static final java.lang.String ACTION_NOTICES
+    public static final java.lang.String ACTION_MEDIAS
+    public static final java.lang.String ACTION_SCREENSHOT
+    public static final java.lang.String MEDIA_SUFFIX
+    public static final java.lang.String MEDIA_TEMP_SUFFIX
+    14:14:public AppConfig()
+com.studio.cloudelevator.task.HeartbeatService$ServerHeartbeatTask:
+    static final int sleep_period
+com.studio.cloudelevator.task.MediaDownloadAsyncTask:
+    static final int timeoutMs
+    static final int DEFAULT_TIMEOUT
+    static final int MAX_REDIRECTS
+    static final int BUFFER_SIZE
+    static final int MIN_PROGRESS_STEP
+    static final long MIN_PROGRESS_TIME
+    static final java.lang.String MediaPref
+com.studio.cloudelevator.task.MediaDownloadAsyncTaskUtils:
+    7:7:public MediaDownloadAsyncTaskUtils()
+com.studio.cloudelevator.task.MediaDownloadServiceNew_0715:
+    static final java.lang.String EXTRA_SYNC
+    16:19:public static void start(android.content.Context,boolean)
+    22:24:public static void stop(android.content.Context)
+com.studio.cloudelevator.task.MediaDownloadService_0715:
+    static final int timeoutMs
+    private static final int DEFAULT_TIMEOUT
+    public static final int MAX_REDIRECTS
+    public static final int BUFFER_SIZE
+    public static final int MIN_PROGRESS_STEP
+    public static final long MIN_PROGRESS_TIME
+    52:55:public static void start(android.content.Context,boolean)
+    158:165:private void downloadMedia(java.lang.String,com.studio.cloudelevator.entity.DownloadInfo)
+com.studio.cloudelevator.task.SerialportService:
+    static final int _FLOOR
+    static final int _STATUS
+    186:191:public static short byteToShort(byte[])
+com.studio.cloudelevator.view.CVideoView:
+    int mLastSystemUiVis
+com.studio.cloudelevator.view.MarqueeTextView:
+    49:53:public varargs void setMarqueeText(java.lang.String[])
+    130:131:public void resmeScroll()
+org.apache.http.entity.mime.Header:
+    68:68:public java.util.List getFields()
+    84:92:public java.util.List getFields(java.lang.String)
+    97:106:public int removeFields(java.lang.String)
+    110:133:public void setField(org.apache.http.entity.mime.MinimalField)
+org.apache.http.entity.mime.HttpMultipart:
+    138:139:public HttpMultipart(java.lang.String,java.nio.charset.Charset,java.lang.String)
+    142:143:public HttpMultipart(java.lang.String,java.lang.String)
+    146:146:public java.lang.String getSubType()
+    150:150:public java.nio.charset.Charset getCharset()
+    154:154:public org.apache.http.entity.mime.HttpMultipartMode getMode()
+org.apache.http.entity.mime.MIME:
+    public static final java.lang.String CONTENT_TYPE
+    public static final java.lang.String CONTENT_TRANSFER_ENC
+    public static final java.lang.String CONTENT_DISPOSITION
+    public static final java.lang.String ENC_8BIT
+    public static final java.lang.String ENC_BINARY
+    36:36:public MIME()
+org.apache.http.entity.mime.MultipartEntity:
+    93:94:public MultipartEntity(org.apache.http.entity.mime.HttpMultipartMode)
+org.apache.http.entity.mime.content.AbstractContentBody:
+    61:61:public java.lang.String getMediaType()
+    65:65:public java.lang.String getSubType()
+org.apache.http.entity.mime.content.ByteArrayBody
+org.apache.http.entity.mime.content.ContentDescriptor:
+    public abstract java.lang.String getMediaType()
+    public abstract java.lang.String getSubType()
+org.apache.http.entity.mime.content.FileBody:
+    85:85:public java.io.InputStream getInputStream()
+    93:94:public void writeTo(java.io.OutputStream,int)
+    130:130:public java.io.File getFile()
+org.apache.http.entity.mime.content.InputStreamBody
+org.apache.http.entity.mime.content.StringBody:
+    58:60:public static org.apache.http.entity.mime.content.StringBody create(java.lang.String,java.lang.String,java.nio.charset.Charset)
+    69:69:public static org.apache.http.entity.mime.content.StringBody create(java.lang.String,java.nio.charset.Charset)
+    76:76:public static org.apache.http.entity.mime.content.StringBody create(java.lang.String)
+    113:114:public StringBody(java.lang.String,java.nio.charset.Charset)
+    130:130:public java.io.Reader getReader()
+    140:141:public void writeTo(java.io.OutputStream,int)
+org.simpleframework.xml.SimpleXmlUtils

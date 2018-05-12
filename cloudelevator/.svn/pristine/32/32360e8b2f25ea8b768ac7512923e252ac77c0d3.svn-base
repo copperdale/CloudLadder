@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: wint:wint-framework:1.3.9.7-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/wint/wint-framework/1.3.9.7-SNAPSHOT/wint-framework-1.3.9.7-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/wint/wint-framework/1.3.9.7-SNAPSHOT/wint-framework-1.3.9.7-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/wint/wint-framework/1.3.9.7-SNAPSHOT/wint-framework-1.3.9.7-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

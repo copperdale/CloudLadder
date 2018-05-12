@@ -1,0 +1,69 @@
+<section class="content">
+    <section class="scrollable wrapper">
+        <section class="panel">
+            <header class="panel-heading">
+                用户列表
+            </header>
+            <div class="row wrapper">
+                <div class="col-sm-5 m-b-xs">
+                    <button class="btn btn-sm btn-success" onclick="app.account.editView(0)"><i class="fa fa-plus"></i>用户
+                    </button>
+                </div>
+                <div class="col-sm-4 m-b-xs">
+                </div>
+                <div class="col-sm-3">
+                    <form class="form-inline" action="$baseModule.setTarget('user/index')">
+                        <div class="input-group">
+                            <input type="text" placeholder="输入用户名称" name="key" class="input-sm form-control" placeholder="Search" value="$!query.key">
+                          <span class="input-group-btn">
+                            <button class="btn btn-sm btn-white" type="submit">查询</button>
+                          </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped b-t">
+                    <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th width="60"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    #foreach($user in $users)
+                        <tr>
+                            <td>$!user.username</td>
+                            <td>
+##                                <a href="javascript:vid(0);" onclick="app.account.editView($!user.id)">
+##                                    <i class="fa fa-edit text-success text"></i>
+##                                </a>
+                                <a href="javascript:vid(0);" onclick="app.account.deleteView($!user.id)">
+                                    <i class="fa fa-trash-o text-danger text"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    #end
+                    </tbody>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        #if($!query.pageSize*$!query.pageNo>$!query.totalResultCount)
+                            #set($cur=($!query.startRow+1)+"-"+$!query.totalResultCount)
+                        #else
+                            #set($cur=($!query.startRow+1)+"-"+$!query.pageSize*$!query.pageNo)
+                        #end
+                        <small class="text-muted inline m-t-sm m-b-sm">当前显示: $!cur
+                            &nbsp;&nbsp;&nbsp;&nbsp;总记录: $!query.totalResultCount</small>
+                    </div>
+                    <div class="col-sm-8 text-right text-center-xs">
+                        $widget.setTemplate('common/pagination').addToContext('pageModule', $baseModule.setTarget('user/index')).addToContext('query', $query)
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+</section>
+<script type="text/javascript" src="$jsServer/app/users.js"></script>

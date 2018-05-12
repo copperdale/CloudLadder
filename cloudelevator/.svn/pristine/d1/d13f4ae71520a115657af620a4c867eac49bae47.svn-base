@@ -1,0 +1,14 @@
+cloudelevator.env.mode=dev
+cloudelevator.jdbc.url=jdbc:mysql://rdsnffebqmefuempublic.mysql.rds.aliyuncs.com:3306/cloudelevator?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true
+cloudelevator.jdbc.username=cloud
+cloudelevator.jdbc.password=Aa123456
+cloudelevator.base.url=http://127.0.0.1:8080
+cloudelevator.static.url=http://127.0.0.1:8080/statics
+cloudelevator.log.root.level=info
+cloudelevator.log.dir=logs
+
+aliyun.accessKeyId=KRDMw5Eqfab5cqp7
+aliyun.accessKeySecret=dX7Okh7THIxWAIIAH4vl8kce7F8EN1
+aliyun.oss.endpoint=http://oss-cn-hangzhou.aliyuncs.com
+aliyun.oss.bucket=hzfx10000
+aliyun.oss.vistorUrl=http://hzfx10000.oss-cn-hangzhou.aliyuncs.com/

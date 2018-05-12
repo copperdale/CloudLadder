@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        智慧云梯系统登录
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="$bootstrapServer/css/bootstrap.min.css">
+    <link rel="stylesheet" href="$bootstrapServer/css/font-awesome.min.css">
+    <link rel="stylesheet" href="$bootstrapServer/css/non-responsive.css">
+
+    <link href="$cssServer/login.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="$bootstrapServer/js/html5shiv.js"></script>
+    <script type="text/javascript" src="$bootstrapServer/js/respond.src.js"></script>
+    <![endif]-->
+
+</head>
+<body class="texture">
+    $page_content
+</body>
+</html>

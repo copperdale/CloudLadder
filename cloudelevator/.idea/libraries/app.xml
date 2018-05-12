@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="app">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file:///Applications/play-1.2.7/documentation/api" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file:///Applications/play-1.2.7/modules/crud/app" />
+      <root url="file:///Applications/play-1.2.7/modules/secure/app" />
+      <root url="file:///Applications/play-1.2.7/modules/grizzly/src" />
+      <root url="file:///Applications/play-1.2.7/modules/docviewer/app" />
+      <root url="file:///Applications/play-1.2.7/modules/testrunner/app" />
+      <root url="file:///Applications/play-1.2.7/modules/testrunner/src" />
+      <root url="file:///Applications/play-1.2.7/framework/src" />
+      <root url="file:///Applications/play-1.2.7/framework/test-src" />
+      <root url="file:///Applications/play-1.2.7/resources/application-skel/app" />
+      <root url="file:///Applications/play-1.2.7/resources/application-skel/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/chat/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/yabe/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/yabe/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/forum/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/forum/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/booking/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/booking/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/jobboard/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/jobboard/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/validation/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/validation/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/zencontact/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/twitter-oauth/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/facebook-oauth2/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/facebook-oauth2/test" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/just-test-cases/app" />
+      <root url="file:///Applications/play-1.2.7/samples-and-tests/just-test-cases/test" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="$buiServer/css/bs3/dpl-min.css">
+<link rel="stylesheet" href="$buiServer/css/bs3/bui-min.css">
+<link rel="stylesheet" href="$buiServer/css/main-min.css">
+<style>
+    .bui-grid-table .bui-grid-hd-inner{
+        height: 34px;
+    }
+</style>
+<form class="form-horizontal" id="baseInfoForm" action="$baseModule.setTarget('device/doSave')"
+      method="post" role="form">
+    <section class="content">
+        <div class="row">
+            <div class="span16">
+                <div id="grid">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+<script type="text/javascript" src="$jsServer/app/media.js"></script>
+<script type="text/javascript">
+    BUI.use(['bui/grid','bui/data'],function(Grid,Data){
+        var Store = Data.Store,
+                columns = [
+                    {title : '表头1',dataIndex :'a', width:100},
+                    {id: '123',title : '表头2',dataIndex :'b', width:100}
+                ],
+                data = [{a:'123'},{a:'cdd',b:'edd'},{a:'1333',b:'eee'}];
+
+        var store = new Store({
+                    data : data
+                }),
+                grid = new Grid.Grid({
+                    render:'#grid',
+                    width:'100%',//如果表格使用百分比，这个属性一定要设置
+                    loadMask: true,
+                    columns : columns,
+                    plugins : [Grid.Plugins.CheckSelection],
+                    bbar:{
+                        pagingBar:true
+                    },
+                    store : store
+                });
+
+        grid.render();
+    });
+</script>

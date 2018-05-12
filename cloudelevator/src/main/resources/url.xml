@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<url-config>
+
+	<url name="baseModule" >
+		<server-url>${cloudelevator.base.url}</server-url>
+	</url>
+
+	<url name="adminModule" extends="baseModule">
+		<path>admin</path>
+	</url>
+
+	<url name="staticServer">
+		<server-url>${cloudelevator.static.url}</server-url>
+	</url>
+
+    <url name="bootstrapServer" extends="staticServer">
+        <path>bootstrap</path>
+    </url>
+
+    <url name="buiServer" extends="staticServer">
+        <path>bui</path>
+    </url>
+
+	<url name="jsServer" extends="staticServer">
+		<path>js</path>
+	</url>
+	
+	<url name="cssServer" extends="staticServer">
+		<path>css</path>
+	</url>
+	
+	<url name="imageServer" extends="staticServer">
+		<path>images</path>
+	</url>
+	
+</url-config>

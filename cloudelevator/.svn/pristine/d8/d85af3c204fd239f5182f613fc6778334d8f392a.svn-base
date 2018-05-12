@@ -1,0 +1,73 @@
+<section class="content">
+    <section class="scrollable wrapper">
+        <section class="panel">
+            <header class="panel-heading">
+                设备列表
+            </header>
+            <div class="row wrapper">
+                <div class="col-sm-12 m-b-xs">
+                    <button class="btn btn-sm btn-success" onclick="app.device.editView(0)"><i class="fa fa-plus"></i>设备
+                    </button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped b-t">
+                    <thead>
+                    <tr>
+                        <th>设备名称</th>
+                        <th>设备编号</th>
+                        <th>客户端编号</th>
+                        <th>总存储空间</th>
+                        <th>可用存储空间</th>
+                        <th>是否在线</th>
+                        <th width="60"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        #foreach($device in $devices)
+                        <tr>
+                            <td>
+                                <a class="page-action" data-id="device-detail" href="#" title="设备详情"
+                                   data-href="$!baseModule.setTarget("device").args($!device.id)">$!device.deviceName</a>
+                            </td>
+                            <td>$!device.deviceNumber</td>
+                            <td>$!device.androidClientId</td>
+                            <td>$!device.allStorage</td>
+                            <td>$!device.curStorage</td>
+                            <td>
+                                #if($!device.online)
+                                    <i class="fa fa-check-circle-o text-success"></i>
+                                #else
+                                    <i class="fa fa-exclamation-circle text-danger"></i>
+                                #end
+                            </td>
+                            <td>
+                                <a href="javascript:vid(0);" onclick="app.device.deleteView($!device.id)">
+                                    <i class="fa fa-trash-o text-danger text"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        #end
+                    </tbody>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        #if($!query.pageSize*$!query.pageNo>$!query.totalResultCount)
+                            #set($cur=($!query.startRow+1)+"-"+$!query.totalResultCount)
+                        #else
+                            #set($cur=($!query.startRow+1)+"-"+$!query.pageSize*$!query.pageNo)
+                        #end
+                        <small class="text-muted inline m-t-sm m-b-sm">当前显示: $!cur
+                            &nbsp;&nbsp;&nbsp;&nbsp;总记录: $!query.totalResultCount</small>
+                    </div>
+                    <div class="col-sm-8 text-right text-center-xs">
+                        $widget.setTemplate('common/pagination').addToContext('pageModule', $baseModule.setTarget('device/index')).addToContext('query', $query)
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+</section>
+<script type="text/javascript" src="$jsServer/app/device.js"></script>

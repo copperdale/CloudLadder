@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="MediaDAO">
+
+	<typeAlias type="com.laixusoft.cloudelevator.biz.dal.domain.MediaDO" alias="media" />
+
+	<resultMap id="mediaMapping" class="media">
+		<result property="id" column="id"/>
+		<result property="gmtModified" column="gmt_modified"/>
+		<result property="title" column="title"/>
+		<result property="gmtCreate" column="gmt_create"/>
+		<result property="url" column="url"/>
+		<result property="fileSize" column="file_size"/>
+
+	</resultMap>
+	
+	<sql id="media-full-columns">
+		t.id, t.gmt_modified, t.title, t.gmt_create, t.url, t.file_size
+	</sql>
+	
+	<insert id="create" parameterClass="media">
+		<![CDATA[
+			insert into media(gmt_modified, title, gmt_create, url, file_size)
+				values (now(), #title#, now(), #url#, #fileSize#)
+		]]>
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT LAST_INSERT_ID();
+	   	</selectKey>
+	</insert>
+	
+	<select id="queryById" resultMap="mediaMapping" parameterClass="int">
+		select
+			<include refid="media-full-columns" />
+		from media t where t.id = #value#  and t.deleted = 0 
+	</select>
+
+	<update id="delete" parameterClass="int">
+			update media t set t.deleted = 1  , t.gmt_modified = now()  where t.id = #value#
+	
+	</update>
+	
+	<update id="update" parameterClass="media">
+		<![CDATA[
+			update media set 
+				gmt_modified= now(),
+				title= #title#,
+				gmt_create= #gmtCreate#,
+				url= #url#,
+				file_size = #fileSize#
+			where id=#id#
+		]]>
+	</update>
+
+    <select id="queryForPageCount" resultClass="int">
+        select count(0) from media t  where t.deleted = 0 
+    </select>
+
+    <select id="queryForPage" resultMap="mediaMapping">
+        select
+        <include refid="media-full-columns" />
+        from media t  where t.deleted = 0 
+        limit #startRow#, #pageSize#
+    </select>
+
+    <select id="queryByIds" resultMap="mediaMapping">
+        select
+        <include refid="media-full-columns" />
+        from media t where t.id in
+        <iterate prepend="(" conjunction="," close=")" >
+            #[]#
+        </iterate>
+         and t.deleted = 0 
+    </select>
+
+</sqlMap>
+

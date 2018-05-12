@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="DeviceMediaDAO">
+
+	<typeAlias type="com.laixusoft.cloudelevator.biz.dal.domain.DeviceMediaDO" alias="deviceMedia" />
+
+	<resultMap id="deviceMediaMapping" class="deviceMedia">
+		<result property="mediaId" column="media_id"/>
+		<result property="id" column="id"/>
+		<result property="gmtModified" column="gmt_modified"/>
+		<result property="gmtCreate" column="gmt_create"/>
+		<result property="play" column="play"/>
+		<result property="deviceId" column="device_id"/>
+		
+	</resultMap>
+	
+	<sql id="deviceMedia-full-columns">
+		t.media_id, t.id, t.gmt_modified, t.gmt_create, t.play, t.device_id
+	</sql>
+	
+	<insert id="create" parameterClass="deviceMedia">
+		<![CDATA[
+			insert into device_media(media_id, gmt_modified, gmt_create, play, device_id) 
+				values (#mediaId#, now(), now(), #play#, #deviceId#)
+		]]>
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT LAST_INSERT_ID();
+	   	</selectKey>
+	</insert>
+	
+	<select id="queryById" resultMap="deviceMediaMapping" parameterClass="int">
+		select
+			<include refid="deviceMedia-full-columns" />
+		from device_media t where t.id = #value#  and t.deleted = 0 
+	</select>
+
+    <select id="queryByDeviceId" resultMap="deviceMediaMapping" parameterClass="int">
+		select
+			<include refid="deviceMedia-full-columns" />
+		from device_media t where t.device_id = #value#  and t.deleted = 0
+	</select>
+
+	<update id="delete" parameterClass="int">
+			update device_media t set t.deleted = 1  , t.gmt_modified = now()  where t.id = #value#
+	
+	</update>
+	
+	<update id="update" parameterClass="deviceMedia">
+		<![CDATA[
+			update device_media set 
+				media_id= #mediaId#,
+				gmt_modified= now(),
+				gmt_create= #gmtCreate#,
+				play= #play#,
+				device_id= #deviceId#
+			where id=#id#
+		]]>
+	</update>
+
+    <select id="queryForPageCount" resultClass="int">
+        select count(0) from device_media t  where t.deleted = 0 
+    </select>
+
+    <select id="queryForPage" resultMap="deviceMediaMapping">
+        select
+        <include refid="deviceMedia-full-columns" />
+        from device_media t  where t.deleted = 0 
+        limit #startRow#, #pageSize#
+    </select>
+
+    <select id="queryByIds" resultMap="deviceMediaMapping">
+        select
+        <include refid="deviceMedia-full-columns" />
+        from device_media t where t.id in
+        <iterate prepend="(" conjunction="," close=")" >
+            #[]#
+        </iterate>
+         and t.deleted = 0 
+    </select>
+
+</sqlMap>
+

@@ -1,0 +1,69 @@
+DROP DATABASE IF EXISTS `cloudelevator`;
+CREATE DATABASE `cloudelevator`;
+use `cloudelevator`;
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`gmt_modified` datetime  not null ,
+`username` varchar(64)  not null ,
+`gmt_create` datetime  not null ,
+`password` varchar(64)  not null ,
+`salt` varchar(64)  not null ,
+`deleted` tinyint  not null  default 0
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `device`;
+
+CREATE TABLE `device` (
+`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`android_client_id` varchar(128) ,
+`gmt_modified` datetime  not null ,
+`device_name` varchar(128)  not null ,
+`gmt_create` datetime  not null ,
+`all_storage` varchar(32) ,
+`cur_storage` varchar(32) ,
+`device_number` varchar(64)  not null ,
+`online` tinyint  not null  default 0,
+`deleted` tinyint  not null  default 0
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `media`;
+
+CREATE TABLE `media` (
+`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`gmt_modified` datetime  not null ,
+`title` varchar(128)  not null ,
+`gmt_create` datetime  not null ,
+`url` varchar(512)  not null ,
+`file_size` int  not null default 0,
+`deleted` tinyint  not null  default 0
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `device_media`;
+
+CREATE TABLE `device_media` (
+`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`media_id` int  not null ,
+`gmt_modified` datetime  not null ,
+`gmt_create` datetime  not null ,
+`play` tinyint  not null default 0,
+`device_id` int  not null ,
+`deleted` tinyint  not null  default 0
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `notice`;
+
+CREATE TABLE `notice` (
+`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`content` varchar(512)  not null ,
+`gmt_modified` datetime  not null ,
+`gmt_create` datetime  not null ,
+`deleted` tinyint  not null  default 0
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="NoticeDAO">
+
+	<typeAlias type="com.laixusoft.cloudelevator.biz.dal.domain.NoticeDO" alias="notice" />
+
+	<resultMap id="noticeMapping" class="notice">
+		<result property="content" column="content"/>
+		<result property="id" column="id"/>
+		<result property="gmtModified" column="gmt_modified"/>
+		<result property="gmtCreate" column="gmt_create"/>
+		
+	</resultMap>
+	
+	<sql id="notice-full-columns">
+		t.content, t.id, t.gmt_modified, t.gmt_create
+	</sql>
+	
+	<insert id="create" parameterClass="notice">
+		<![CDATA[
+			insert into notice(content, gmt_modified, gmt_create) 
+				values (#content#, now(), now())
+		]]>
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT LAST_INSERT_ID();
+	   	</selectKey>
+	</insert>
+	
+	<select id="queryById" resultMap="noticeMapping" parameterClass="int">
+		select
+			<include refid="notice-full-columns" />
+		from notice t where t.id = #value#  and t.deleted = 0 
+	</select>
+
+	<update id="delete" parameterClass="int">
+			update notice t set t.deleted = 1  , t.gmt_modified = now()  where t.id = #value#
+	
+	</update>
+	
+	<update id="update" parameterClass="notice">
+		<![CDATA[
+			update notice set 
+				content= #content#,
+				gmt_modified= now(),
+				gmt_create= #gmtCreate#
+			where id=#id#
+		]]>
+	</update>
+
+    <select id="queryForPageCount" resultClass="int">
+        select count(0) from notice t  where t.deleted = 0 
+    </select>
+
+    <select id="queryForPage" resultMap="noticeMapping">
+        select
+        <include refid="notice-full-columns" />
+        from notice t  where t.deleted = 0 
+        limit #startRow#, #pageSize#
+    </select>
+
+    <select id="queryByIds" resultMap="noticeMapping">
+        select
+        <include refid="notice-full-columns" />
+        from notice t where t.id in
+        <iterate prepend="(" conjunction="," close=")" >
+            #[]#
+        </iterate>
+         and t.deleted = 0 
+    </select>
+
+</sqlMap>
+

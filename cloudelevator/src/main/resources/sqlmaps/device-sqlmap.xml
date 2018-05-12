@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="DeviceDAO">
+
+	<typeAlias type="com.laixusoft.cloudelevator.biz.dal.domain.DeviceDO" alias="device" />
+
+	<resultMap id="deviceMapping" class="device">
+		<result property="androidClientId" column="android_client_id"/>
+		<result property="id" column="id"/>
+		<result property="gmtModified" column="gmt_modified"/>
+		<result property="deviceName" column="device_name"/>
+		<result property="gmtCreate" column="gmt_create"/>
+		<result property="allStorage" column="all_storage"/>
+		<result property="curStorage" column="cur_storage"/>
+		<result property="deviceNumber" column="device_number"/>
+		<result property="online" column="online"/>
+
+	</resultMap>
+	
+	<sql id="device-full-columns">
+		t.android_client_id, t.id, t.gmt_modified, t.device_name, t.gmt_create, t.all_storage, t.cur_storage, t.device_number, t.online
+	</sql>
+	
+	<insert id="create" parameterClass="device">
+		<![CDATA[
+			insert into device(android_client_id, gmt_modified, device_name, gmt_create, all_storage, cur_storage, device_number, online)
+				values (#androidClientId#, now(), #deviceName#, now(), #allStorage#, #curStorage#, #deviceNumber#, #online#)
+		]]>
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT LAST_INSERT_ID();
+	   	</selectKey>
+	</insert>
+	
+	<select id="queryById" resultMap="deviceMapping" parameterClass="int">
+		select
+			<include refid="device-full-columns" />
+		from device t where t.id = #value#  and t.deleted = 0 
+	</select>
+
+	<update id="delete" parameterClass="int">
+			update device t set t.deleted = 1  , t.gmt_modified = now()  where t.id = #value#
+	
+	</update>
+	
+	<update id="update" parameterClass="device">
+		<![CDATA[
+			update device set 
+				android_client_id= #androidClientId#,
+				gmt_modified= now(),
+				device_name= #deviceName#,
+				gmt_create= #gmtCreate#,
+				all_storage= #allStorage#,
+				cur_storage= #curStorage#,
+				device_number= #deviceNumber#,
+				online = #online#
+			where id=#id#
+		]]>
+	</update>
+
+    <select id="queryForPageCount" resultClass="int">
+        select count(0) from device t  where t.deleted = 0 
+    </select>
+
+    <select id="queryForPage" resultMap="deviceMapping">
+        select
+        <include refid="device-full-columns" />
+        from device t  where t.deleted = 0 
+        limit #startRow#, #pageSize#
+    </select>
+
+    <select id="queryByIds" resultMap="deviceMapping">
+        select
+        <include refid="device-full-columns" />
+        from device t where t.id in
+        <iterate prepend="(" conjunction="," close=")" >
+            #[]#
+        </iterate>
+         and t.deleted = 0 
+    </select>
+
+</sqlMap>
+

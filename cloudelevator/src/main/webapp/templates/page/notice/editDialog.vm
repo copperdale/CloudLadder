@@ -1,0 +1,15 @@
+<form class="form-horizontal" id="baseInfoForm" action="$baseModule.setTarget('notice/doSave')"
+      method="post" role="form">
+
+    $securityUtil.tokenHtml
+    <input type="hidden" id="id" name="id" value="$!notice.id"/>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">通知内容</label>
+        <div class="col-lg-10">
+            <textarea class="form-control" rows="6" data-minwords="6" name="content">
+                $!notice.content
+            </textarea>
+        </div>
+    </div>
+</form>
